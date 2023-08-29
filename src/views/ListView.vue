@@ -28,13 +28,13 @@ onUpdated(()=>{fetchData()})
       <img class="union" src="src/assets/union.svg" alt="">
       <nav class="nav-bar">
         <img class="foodl" src="src/assets/foodl.svg" alt="">
-        <span class="nav-item-right">Home</span>
+        <span @click="router.push({name:'home'})" class="nav-item-right">Home</span>
         <span class="nav-item-right">Search</span>
       </nav>
       <h1 class="header">What ingredients do you have?</h1>
             <div class="input-with-icon">
               <img class="input-icon" src="src/assets/charm-search.svg" />
-              <input type="text" v-model="mealName" class="rectangle" placeholder="Enter food name">
+              <input type="text" v-model="mealName" class="rectangle" placeholder="Search Here">
             </div>
           <div class="group-2"></div>
          
@@ -102,7 +102,8 @@ select:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 150px;
+  padding-bottom: 200px;
+  margin-bottom: 50px;
   width: 100%;
 }
 
@@ -122,6 +123,7 @@ nav img{
 }
 
 nav span{
+  cursor: pointer;
   display: flex;
   margin: auto 20px;
   font-family: "IBM Plex Sans-Bold", Helvetica;
